@@ -120,6 +120,7 @@ def generate_api_output(cities: List[str], params: List[str]) -> dict:
 def get_weather_json_city(request: Request) -> dict:
     request_dict = request.query_params._dict
     params = []
+    cities = []
     if 'params' in request_dict.keys():
         params = request_dict['params'].split()
     if 'city' in request_dict.keys():
